@@ -31,6 +31,7 @@
             else
             {
                 Console.WriteLine("Cell is already filled, try another!");
+                continue;
             }
 
             for(int i = 0; i < board.GetLength(0); i++)
