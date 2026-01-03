@@ -1,0 +1,15 @@
+C:\Users\milto\OneDrive\Documents\PROJECTS_PERSONAL\tic-tac-toe\bin\Debug\net10.0\tic-tac-toe.exe
+C:\Users\milto\OneDrive\Documents\PROJECTS_PERSONAL\tic-tac-toe\bin\Debug\net10.0\tic-tac-toe.deps.json
+C:\Users\milto\OneDrive\Documents\PROJECTS_PERSONAL\tic-tac-toe\bin\Debug\net10.0\tic-tac-toe.runtimeconfig.json
+C:\Users\milto\OneDrive\Documents\PROJECTS_PERSONAL\tic-tac-toe\bin\Debug\net10.0\tic-tac-toe.dll
+C:\Users\milto\OneDrive\Documents\PROJECTS_PERSONAL\tic-tac-toe\bin\Debug\net10.0\tic-tac-toe.pdb
+C:\Users\milto\OneDrive\Documents\PROJECTS_PERSONAL\tic-tac-toe\obj\Debug\net10.0\tic-tac-toe.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\milto\OneDrive\Documents\PROJECTS_PERSONAL\tic-tac-toe\obj\Debug\net10.0\tic-tac-toe.AssemblyInfoInputs.cache
+C:\Users\milto\OneDrive\Documents\PROJECTS_PERSONAL\tic-tac-toe\obj\Debug\net10.0\tic-tac-toe.AssemblyInfo.cs
+C:\Users\milto\OneDrive\Documents\PROJECTS_PERSONAL\tic-tac-toe\obj\Debug\net10.0\tic-tac-toe.csproj.CoreCompileInputs.cache
+C:\Users\milto\OneDrive\Documents\PROJECTS_PERSONAL\tic-tac-toe\obj\Debug\net10.0\tic-tac-toe.sourcelink.json
+C:\Users\milto\OneDrive\Documents\PROJECTS_PERSONAL\tic-tac-toe\obj\Debug\net10.0\tic-tac-toe.dll
+C:\Users\milto\OneDrive\Documents\PROJECTS_PERSONAL\tic-tac-toe\obj\Debug\net10.0\refint\tic-tac-toe.dll
+C:\Users\milto\OneDrive\Documents\PROJECTS_PERSONAL\tic-tac-toe\obj\Debug\net10.0\tic-tac-toe.pdb
+C:\Users\milto\OneDrive\Documents\PROJECTS_PERSONAL\tic-tac-toe\obj\Debug\net10.0\tic-tac-toe.genruntimeconfig.cache
+C:\Users\milto\OneDrive\Documents\PROJECTS_PERSONAL\tic-tac-toe\obj\Debug\net10.0\ref\tic-tac-toe.dll
