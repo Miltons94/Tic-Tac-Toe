@@ -1,52 +1,71 @@
-﻿internal class Program{
+﻿using System.Runtime.CompilerServices;
+
+internal class Program
+{
+	private int player=0;
 	static void Main(string[] args){
 
 		//game board 3x3
-		char[,] board = new char[3,3];
+		int size=3;
+		char[,] board = new char[size,size];
 
 		while (true)
 		{
-			//get x value (row)
-			Console.WriteLine("Enter the x cordinate of your move (0-2): ");
-			if (!int.TryParse(Console.ReadLine(), out int x) || x > 2 || x < 0)
+			//clear console and render the game board
+			Console.Clear();
+			RenderBoard(board);
+
+			//get cordinates from player
+			(int x,int y) = Player.GetCordinates(board);
+			char move = Player.GetSymbol();
+			if (Cell.IsEmpty(board, x, y))	// reduntant if. (always true) :D
 			{
-				Console.WriteLine("Please enter a valid move between 0-2: ");
-				continue;
+				board[x,y]=move;
 			}
 
-			//get y value (column)
-			Console.WriteLine("Enter the y cordinate of your move (0-2): ");
-			if(!int.TryParse(Console.ReadLine(),out int y) || y > 2 || y < 0)
+			//check for a winner
+			if (GameLogic.CheckWin(board, move))
 			{
-				Console.WriteLine("Please enter a valid move between 0-2: ");
-				continue;
-			}
-				
-			if(!char.TryParse(Console.ReadKey().KeyChar.ToString(),out char move) || move!='O' || move!='X')
-			{
-				Console.WriteLine("Please enter a valid move ( O or X ): ");
-				continue;
-			}
-				
-			if(board[x,y]=='\0') board[x,y] = move;
-			else
-			{
-				Console.WriteLine("Cell is already filled, try another!");
-				continue;
-			}
-
-			for(int i = 0; i < board.GetLength(0); i++)
-			{
-				for(int j = 0; j < board.GetLength(1); j++)
-				{
-					Console.WriteLine(board[i,j]);
-				}
-			}
-			if(Array.TrueForAll(board.Cast<char>().ToArray(),c => c != '\0'))
-			{
-				Console.WriteLine("Game Over!");
+				Console.WriteLine($"Player {move} has won!");
 				break;
 			}
+			
+			if (GameLogic.IsDraw(board))
+			{
+				Console.WriteLine("Its a draw!");
+				break;
+			}
+		}
+	}
+
+	//function to render Board 
+	static void RenderBoard(char[,] board)
+	{
+		//write column heads
+		for(int col = 0; col < board.GetLength(1); ++col)
+		{
+			Console.Write($"\t{col}");
+		}
+		Console.WriteLine();
+		//outer loop for printing rows
+		for(int x = 0; x < board.GetLength(0); x++)
+		{
+			//show row num
+			Console.Write($"{x}\t");	
+			//for printing columns
+			for(int y = 0; y < board.GetLength(1); y++)
+			{
+				//check if cell is null or not
+				if (board[x, y] != '\0')
+				{
+					Console.Write($"{board[x,y]}\t");
+				}
+				else
+				{
+					Console.Write("?\t");
+				}
+			}
+			Console.WriteLine();
 		}
 	}
 }
