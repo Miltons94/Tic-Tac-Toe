@@ -2,34 +2,35 @@
 
 internal class Program
 {
-	private int player=0;
+	private static int player=0;
 	static void Main(string[] args){
 
 		//game board 3x3
 		int size=3;
 		char[,] board = new char[size,size];
 
+		//GAME LOOP
 		while (true)
 		{
 			//clear console and render the game board
 			Console.Clear();
 			Render.PrintBoard(board);
 
-			//get cordinates from player
+			//prompt player
+			Console.WriteLine($"Player {(player%2)+1}'s turn ");
+			//get cordinates from player and checks if the cell is null
 			(int x,int y) = Player.GetCordinates(board);
-			char move = Player.GetSymbol();
-			if (Cell.IsEmpty(board, x, y))	// reduntant if. (always true) :D
-			{
-				board[x,y]=move;
-			}
-
+			char move = (player%2==0)? 'X':'O';
+			board[x,y]=move;
+			player++;
+			
 			//check for a winner
 			if (GameLogic.CheckWin(board, move))
 			{
-				Console.WriteLine($"Player {move} has won!");
+				Console.WriteLine($"Player {(--player%2)+1} has won!");
 				break;
 			}
-			
+			//check for draw
 			if (GameLogic.IsDraw(board))
 			{
 				Console.WriteLine("Its a draw!");

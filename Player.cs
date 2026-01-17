@@ -1,18 +1,6 @@
 internal class Player
 {
-   //get symbol (X or O)
-   public static char GetSymbol()
-   {
-      while (true)
-      {
-         Console.WriteLine("Enter your symbol (X or O): ");
-         if(char.TryParse(Console.ReadLine()?.ToUpperInvariant(),out char move) && (move=='X' || move=='O'))
-         {
-            return move;
-         }
-      }
-   }
-
+   
    //get cordinates
    public static (int,int) GetCordinates(char[,] board)
    {
